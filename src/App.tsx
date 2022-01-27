@@ -1,5 +1,8 @@
-import * as React from "react"
-import { ChakraProvider, extendTheme } from "@chakra-ui/react"
+import * as React from "react";
+import { ChakraProvider, extendTheme } from "@chakra-ui/react";
+import { Header } from './components/header';
+import { Footer } from './components/footer';
+import { Landing } from './pages/landing/landing';
 
 
   
@@ -10,4 +13,10 @@ const theme = extendTheme({
   },
 })
 
-export const App () => <ChakraProvider theme={theme}></ChakraProvider>
+export const App = () => {
+<ChakraProvider theme={theme}>
+  <Header />
+  <Landing />
+  <Footer />
+</ChakraProvider>
+};
